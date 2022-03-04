@@ -1,0 +1,22 @@
+
+
+#new-post {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #33dd33;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 7px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#new-post .glyphicon {
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+}
+#new-post:hover {
+    background-color: #44ee44;
+}

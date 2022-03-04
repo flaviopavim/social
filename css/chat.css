@@ -1,0 +1,53 @@
+#center-top-img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px 0 0;
+    float: left;
+}
+#center-top-title {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 3 0 0 0;
+    padding: 0;
+}
+#center-top-subtitle {
+    font-size: 12px;
+    font-style: italic;
+    margin: -3px 0 0 0;
+    padding: 0;
+}
+
+
+.msg {
+    position: relative;
+    margin: 3px;
+    padding: 10px;
+    background-color: #666;
+    border-radius: 10px;
+    color:#fff;
+    clear: both;
+}
+.baloon-left {
+    float: left;
+}
+.baloon-right {
+    float: right;
+    text-align: right;
+    align-items: flex-end;
+}
+
+#msg {
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    border: none;
+    border-top: 1px #ccc solid;
+    text-indent: 8px;
+    margin-top: 5px;
+}
+
+
+.crypted, .left-link-body-user_id, .left-link-body-md5, .left-link-body-msg {
+    display: none;
+}

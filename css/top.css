@@ -1,0 +1,30 @@
+
+
+#brand {
+    display: table;
+    padding: 15px 10px;
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+    cursor: pointer;
+}
+
+#top .glyphicon {
+    display: table;
+    padding: 15px 10px;
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    float: left;
+}
+
+
+
+#top input {
+    display: block;
+    width: 200px;
+    float: left;
+    margin: 8px;
+}

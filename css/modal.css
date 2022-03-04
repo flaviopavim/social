@@ -1,0 +1,72 @@
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#modal-content {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+#modal-header {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px 10px 0 0;
+}
+#modal-header #modal-title {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+}
+#modal-header .glyphicon-remove {
+    display: block;
+    width: 20px;
+    height: 20px;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+#modal-body {
+    display: block;
+    width: 100%;
+    height: calc(100% - 100px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#modal-body textarea {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+#modal-footer {
+    display: block;
+    width: 100%;
+    height: 30px;
+    text-align: right;
+    float: right;
+    align-items: right;
+    margin-top:10px;
+}

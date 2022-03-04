@@ -1,0 +1,26 @@
+#right-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    background-color: #33dd33;
+    color: #fff;
+    display: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 4px 5px;
+    font-size: 10px;
+    font-weight: 100;
+}
+
+#right:hover #right-close {
+    display: block;
+}
+
+#avatar {
+    width:80%;
+    margin: 10%;
+    border-radius: 50%;
+}
+
