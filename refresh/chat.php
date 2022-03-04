@@ -142,10 +142,10 @@ if (!isset($_SESSION[$_POST['session'].'_chat'])) {
     $html=preg_replace('/\s+/', ' ', $html);
     ?>
     <script>
-        $('#chat-container').html('<?php echo $html; ?>');
+        $('#chat-body').html('<?php echo $html; ?>');
         decryptChat();
         if (roll) {
-            $('#center').scrollTop($('#center')[0].scrollHeight);
+            $('#chat-container').scrollTop($('#chat-container')[0].scrollHeight);
         }
         refreshing=false;
         secs=7;
@@ -180,10 +180,10 @@ if (!isset($_SESSION[$_POST['session'].'_chat'])) {
         ?>
         <script>
             $('.msg-temp').remove();
-            $('#chat-container').append('<?php echo $html; ?>');
+            $('#chat-body').append('<?php echo $html; ?>');
             decryptChat();
             if (roll) {
-                $('#center').scrollTop($('#center')[0].scrollHeight);
+                $('#chat-container').scrollTop($('#chat-container')[0].scrollHeight);
             }
             refreshing=false;
             secs=7;

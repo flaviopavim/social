@@ -11,9 +11,11 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/color.css">
         <!-- Esqueleto -->
+        <!--
         <link rel="stylesheet" href="css/body.css">
         <link rel="stylesheet" href="css/button.css">
         <link rel="stylesheet" href="css/top.css">
+    -->
         <link rel="stylesheet" href="css/left.css">
         <!-- Eventos -->
         <link rel="stylesheet" href="css/modal.css">
@@ -27,14 +29,112 @@
     </head>
     <body>
         <?php 
-        include 'view/top.php'; 
-        include 'view/center.php'; 
-        include 'view/left.php'; 
-        include 'view/right.php'; 
-        include 'view/modal.php'; 
+        //include 'view/top.php'; 
+        //include 'view/center.php'; 
+        //include 'view/left.php'; 
+        //include 'view/right.php'; 
+
+
+        ?>
+         <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            #top, #left, $center, #right {
+                display: block;
+            }
+            #top {
+                width: 100%;
+                height: 60px;
+                background-color: #ddd;
+            }
+            #left, #center, #right {
+                float: left;
+                height: calc(100% - 60px);
+                
+            }
+            #chat-container {
+                width: 100%;
+                overflow-x: hidden;
+                overflow-y: auto;
+                height: calc(100% - 50px);
+            }
+            
+            #chat-body {
+                display: table;
+                width: 90%;
+                margin: 0 5%;
+                /*
+                padding: 15px;
+                background-color: #ddd;*/
+            }
+            
+            #left, #right {
+                width: 20%;
+                background-color: #eee;
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+            #center {
+                position: relative;
+                width: 60%;
+                background-color: #f3f3f3;
+            }
+
+
+
+            #msg {
+            }
+        </style>
+
+        <div id="top">
+            <!--
+            <div style="float: left; width: 80%;">
+                <img id="top-img">
+                <div id="top-title"></div>
+                <div id="top-subtitle"></div>
+            </div>
+            <div class="right">
+                <i class="glyphicon glyphicon-lock" onclick="$('#msg').val('/k ').focus()"></i>
+                <--<i class="glyphicon glyphicon-remove"></i>--
+            </div>
+            -->
+        </div>
+        <div id="left">
+            <div id="left-body"></div>
+        </div>
+        <div id="center">
+            <div id="chat-container">
+                <div id="chat-body"></div>
+            </div>
+            
+            <input type="text" id="msg" placeholder="Digite algo">
+        </div>
+        <div id="right">
+            <div id="right-close"><i class="glyphicon glyphicon-remove"></i></div>
+            <center>
+                <img style="cursor: pointer;" id="avatar" src="">
+                <h2 style="cursor: pointer;" id="name" onclick="$('#msg').val('/nick ').focus();"></h2>
+                <!--
+                    <h4 style="cursor: pointer;" onclick="$('#msg').val('/bio ').focus();">Programador</h4>
+                    <i style="cursor: pointer;"  onclick="$('#msg').val('/status ').focus();" class="color-online">Online</i>
+                    
+                    <br>
+                    <br>
+                    <br>
+                    Profile | Options 
+                -->
+            </center>
+        </div>
+        <?php
+
+
+
+        //include 'view/modal.php'; 
         //include 'view/post.php'; 
         //include 'view/notification.php'; 
-        include 'view/chat.php'; 
+        //include 'view/chat.php'; 
         ?>
         <script>
             var action='nick';
@@ -77,7 +177,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                    <button id="bt-enter" type="button" class="btn btn-primary" onclick="enter();">Entrar</button>
+                    <button id="bt-enter" type="button" class="btn btn-success" onclick="enter();"></button>
                 </div>
                 </div>
             </div>
@@ -148,7 +248,6 @@
                         pass: $('#pass').val()
                     });
                 }
-                $('#bt-enter').html('Carregando...');
                 $('#myModal').modal('hide');
             }
         </script>
